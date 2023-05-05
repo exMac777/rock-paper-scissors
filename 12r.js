@@ -46,8 +46,10 @@ function playGame(playerMove) {
 
   if (playerMove === computerMove) {
     score.draws++;
-    updateResults(playerMove, computerMove);
     updateMessage("draw");
+    updateScore();
+    saveToLocal();
+    updateResults(playerMove, computerMove);
     return;
   } else if (playerMove === "rock") {
     if (computerMove === "scissors") {
@@ -154,13 +156,13 @@ function autoPlay() {
 }
 
 document.body.addEventListener("keydown", (event) => {
-  if (event.key === "r") {
+  if (event.key.toLowerCase() === "r") {
     playGame("rock");
-  } else if (event.key === "p") {
+  } else if (event.key.toLowerCase() === "p") {
     playGame("paper");
-  } else if (event.key === "s") {
+  } else if (event.key.toLowerCase() === "s") {
     playGame("scissors");
-  } else if (event.key === "a") {
+  } else if (event.key.toLowerCase() === "a") {
     autoPlay();
   } else if (event.key === "Backspace") {
     showResetConfirmation();
