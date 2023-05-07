@@ -46,8 +46,8 @@ body {
 .option {
   border: none;
   margin-right: 10px;
-  /* background: rgb(110, 142, 248); */
-  background: radial-gradient(rgb(164, 185, 255), rgb(50, 98, 255));
+  background: rgb(110, 142, 248);
+  /* background: radial-gradient(rgb(164, 185, 255) 50%, rgb(50, 98, 255) 100%); */
   border-radius: 50%;
   padding: 1rem;
   cursor: pointer;
@@ -55,7 +55,8 @@ body {
   transition: all 300ms ease;
 }
 .option:hover {
-  background: rgb(68, 112, 255);
+  /* background: radial-gradient(rgb(164, 185, 255) 60%, rgb(50, 98, 255) 100%); */
+  background: rgb(50, 98, 255);
   transition: all 300ms ease;
 }
 .option:active {
